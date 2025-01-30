@@ -26,14 +26,81 @@ Elegí Draw.io porque es una herramienta gratuita, fácil de usar y accesible de
 
 ## APARTADO C
 
-Cada clase iría en un archivo independiente. Para crear una clase de un diagrama UML a POO (Kotlin). 
+Para crear una clase de un diagrama UML a POO (Kotlin). 
 En la caja de cada clase hay 3 cuadros. El primero es el nombre de la clase, el segundo son los atributos y el tercero son los métodos. 
 
-Para crear una clase en Kotlin es: ()
-class nombreClase ( val o var nombreAtributo: tipoValor)  
+Para crear una clase en Kotlin es: (val -> inmutable , var -> mutable)  |  Dentro de los () van los atributos y dentro de las {} los métodos/funciones/comportamientos de la clase.
+---> class nombreClase ( val o var nombreAtributo: tipoValor){ fun nombreMétodo(nombreParámetro: tipoValor) }  
 Añadir que +, -, # para UML es: public, private, protected para POO.
-Por ejemplo: Una clase privada sería "private class"
+Por ejemplo: Una clase privada sería "private class", un atributo privado sería "private var" y un método/función privado sería private fun.
 
-enum class Estado{
-    PENDIENTE, PAGADO, CONFIRMADO, ENVIADO, ENTREGADO,
+Ejemplo:
+class Cliente(
+    val id: Int,
+    val nombre: String,
+    val correo: String,
+    val direccion: String
+) {
+    val listaPedidos: MutableList<Pedido> = mutableListOf()  \\ Creo el atributo dentro ya que no quiero que se pase como parametro, va a servir para añadir los pedidos cada vez que realice uno.
+    
+    fun realizarPedido(pedido: Pedido, listaProductos: List<Map<Producto, Int>>, pago: Pago) {
+        //Lógica del método o función
+    }
 }
+
+Así con todas las clases.
+
+He utilizado también clases enumaradas, representan un conjunto fijo de valores, en este caso: los estados del pedido:
+    -PENDIENTE
+    -PAGADO
+    -CONFIRMADO
+    -ENVIADO
+    -ENTREGADO
+
+En UML es una caja con dos cuadros con dos cuadros, el primero el nombre de la clase que va entre <<>> con enum delante del nombre; y el segundo con las valores fijos. En poo (Kotlin):
+---> enum Class nombreClase(){ conjunto de valores separados por ',' }
+
+Ejemplo:
+enum class Estado {
+      PENDIENTE, PAGADO, CONFIRMADO, ENVIADO, ENTREGADO, ;
+
+// Función modificada para mostrar los valores en minúsculas
+     override fun toString(): String {
+         return super.toString().lowercase()
+     }
+
+}
+
+Para las clases heredadas que son las subclases de Pago (la que recibe la flecha vacía).
+Utilizo abstract class es una clase que no puede ser inistanciada directamente, la utilizo para heredar los atributos y métodos/funciones.
+
+Ejemplo: 
+abstract class Pago(
+    val id: Int,
+    val monto: Float,
+    val fecha: Date,
+    val formaPago: String
+) {
+//abstract lo que hace es permitir solo a las clases herederas poder acceder y modificarla a su gusto
+    abstract fun registrarPago() {}
+    abstract fun consultarPago() {}
+        //consulta el pago
+}
+Para la subclase:
+class PagoTarjeta(
+    id: Int,
+    monto: Float,
+    fecha: Date,
+    formaPago: String,
+    val numeroTarjeta: String,
+    val fechaCaducidad: String,
+    val tipoTarjeta: String
+) : Pago(id, monto, fecha, formaPago) // Esto indica la herencia {
+    override fun consultarPago() // Sobrescribe la función heredada
+}
+
+
+Todo el código en la carpeta src.
+
+
+
