@@ -53,11 +53,12 @@ class Cliente(
 Así con todas las clases.
 
 He utilizado también clases enumaradas, representan un conjunto fijo de valores, en este caso: los estados del pedido:
-    -PENDIENTE
-    -PAGADO
-    -CONFIRMADO
-    -ENVIADO
-    -ENTREGADO
+
+    - PENDIENTE
+    - PAGADO
+    - CONFIRMADO
+    - ENVIADO
+    - ENTREGADO
 
 En UML es una caja con dos cuadros con dos cuadros, el primero el nombre de la clase que va entre <<>> con enum delante del nombre; y el segundo con las valores fijos. En poo (Kotlin):
 ---> enum Class nombreClase(){ conjunto de valores separados por ',' }
