@@ -35,6 +35,7 @@ Añadir que +, -, # para UML es: public, private, protected para POO.
 Por ejemplo: Una clase privada sería "private class", un atributo privado sería "private var" y un método/función privado sería private fun.
 
 Ejemplo:
+```Kotlin
 class Cliente(
     val id: Int,
     val nombre: String,
