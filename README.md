@@ -48,8 +48,8 @@ class Cliente(
         //Lógica del método o función
     }
 }
----
 
+```
 Así con todas las clases.
 
 He utilizado también clases enumaradas, representan un conjunto fijo de valores, en este caso: los estados del pedido:
@@ -63,7 +63,7 @@ En UML es una caja con dos cuadros con dos cuadros, el primero el nombre de la c
 ---> enum Class nombreClase(){ conjunto de valores separados por ',' }
 
 Ejemplo:
-```
+```Kotlin
 enum class Estado {
       PENDIENTE, PAGADO, CONFIRMADO, ENVIADO, ENTREGADO, ;
 
@@ -72,8 +72,9 @@ enum class Estado {
          return super.toString().lowercase()
      }
 
-} ```
+}
 
+```
 Para las clases heredadas que son las subclases de Pago (la que recibe la flecha vacía).
 Utilizo abstract class es una clase que no puede ser inistanciada directamente, la utilizo para heredar los atributos y métodos/funciones.
 
@@ -101,9 +102,10 @@ class PagoTarjeta(
     val tipoTarjeta: String
 ) : Pago(id, monto, fecha, formaPago) // Esto indica la herencia {
     override fun consultarPago() // Sobrescribe la función heredada
-}```
+}
 
 
+```
 Todo el código en la carpeta src.
 
 
