@@ -48,7 +48,7 @@ class Cliente(
         //Lógica del método o función
     }
 }
-``` ````
+---
 
 Así con todas las clases.
 
