@@ -26,114 +26,13 @@ Elegí Draw.io porque es una herramienta gratuita, fácil de usar y accesible de
 
 ## APARTADO C
 
-Cada clase iría en un archivo independiente.
+Cada clase iría en un archivo independiente. Para crear una clase de un diagrama UML a POO (Kotlin). 
+En la caja de cada clase hay 3 cuadros. El primero es el nombre de la clase, el segundo son los atributos y el tercero son los métodos. 
 
-class Cliente(
-    val id: Int,
-    val nombre: String,
-    val correo: String,
-    val direccion: String
-) {
-    fun realizarPedido() {
-        // Lógica para realizar un pedido
-    }
-}
-
-class Pedido(
-    val id: Int,
-    val fecha: Date,
-    val estado: Estado,
-    val costoTotal: Float,
-    val listaProductos: List<Producto>
-) {
-    fun registrarPedido() {
-        //Registra el pedido
-    }
-    fun calcularTotal() {
-        // Calcula el precio total
-    }
-    fun actualizarEstado() {
-        //Actualiza el estado del pedido
-    }
-    fun consultarPedido() {
-        //Consulta el pedido
-    }
-    fun actualizarStockProductos() {
-        //Actualiza stock de los productos
-    }
-}
-
-class Producto(
-    val id: Int,
-    val nombre: String,
-    val descripcion: String,
-    val precio: Float,
-    val impuestos: Float,
-    val stock: Int
-) {
-    fun registrarProducto() {
-        //Registra los productos
-    }
-    fun actualizarStock() {
-        //actualiza el stock
-    }
-    fun consultarProducto() {
-        //consulta el producto
-    }
-}
-
-class Stock(
-    val idProducto: Int,
-    val cantidadDisponible: Int
-) {
-    fun verStock() {
-        //VER STOCK DEL PRODUCTO
-    }
-}
-
-abstract class Pago(
-    val id: Int,
-    val monto: Float,
-    val fecha: Date,
-    val formaPago: String
-) {
-    open fun registrarPago() {
-        //registra el pago
-    }
-    open fun consultarPago() {
-        //consulta el pago
-    }
-}
-
-class PagoTarjeta(
-    id: Int,
-    monto: Float,
-    fecha: Date,
-    formaPago: String,
-    val numeroTarjeta: String,
-    val fechaCaducidad: String,
-    val tipoTarjeta: String
-) : Pago(id, monto, fecha, formaPago) {
-}
-
-class PagoEfectivo(
-    id: Int,
-    monto: Float,
-    fecha: Date,
-    formaPago: String,
-    val tipoMoneda: String
-): Pago(id, monto, fecha, formaPago) {
-}
-
-class PagoCheque(
-    id: Int,
-    monto: Float,
-    fecha: Date,
-    formaPago: String,
-    val banco: String,
-    val numeroCheque: String
-) : Pago(id, monto, fecha, formaPago){
-}
+Para crear una clase en Kotlin es: ()
+class nombreClase ( val o var nombreAtributo: tipoValor)  
+Añadir que +, -, # para UML es: public, private, protected para POO.
+Por ejemplo: Una clase privada sería "private class"
 
 enum class Estado{
     PENDIENTE, PAGADO, CONFIRMADO, ENVIADO, ENTREGADO,
