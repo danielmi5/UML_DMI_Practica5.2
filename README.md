@@ -4,6 +4,24 @@
 
 ![Diagrama UML](archivos/practica5_2.png)
 
+- Los pedidos los realizan los clientes, y pueden contener uno o varios productos.
+-> Dos clases (Cliente y producto) es una relación de asociación (1..*) y Cliente con metodo realizarPedido()  
+- Debe registrar la información de cada pedido, incluyendo la fecha en que se realizó.
+-> Nueva clase (Pedido) con atributos como el id, el estado, las lista de los productos, etc.
+- Estos productos deben estar registrados en el sistema junto con su información correspondiente (nombre, descripción, precio, impuestos, etc.).
+-> Atributos a añadir para la clase Producto como el nombre, la descripción...
+- El sistema debe ser capaz de calcular el coste total de cada pedido, teniendo en cuenta la cantidad de cada producto incluido en el pedido, sus precios individuales y los impuestos correspondientes.
+-> Función/Método para la clase Pedido que tenga en cuenta la cantidad, su precio y los impuestos.
+- Debe haber un registro actualizado del stock de cada producto, de forma que se pueda informar al cliente si habrá algún retraso en la entrega debido a falta de stock.
+-> He introducido un atributo a Producto que sea su stock.
+- Cada pedido puede ser pagado de una sola vez o en varios pagos.
+- Se debe ser capaz de registrar la información de cada pago realizado por el cliente.
+-> Nueva clase (Pago) la relación entre Pedido y Pago será (1..*). Además de atributos que informen sobre el pago, como la id, el monto, etc.
+- Las formas de pago aceptadas por el sistema son: Card (número, fecha de caducidad y tipo de tarjeta), Cash  (Tipo de moneda) y cheque (nombre y banco).
+-> He decidido que serán subclases de Pago (relación de herencia), por lo que heredaran sus atributos y métodos. Además de sus atributos propios. 
+- Cada pedido puede estar en uno de los siguientes estados: pdte, pgdo, pcdo, envdo, entgdo. El estado de cada pedido debe ser actualizado en el sistema en función de su evolución.
+-> He decido utilizar una clase enumerada para los estados del pedido llamada `Estado`. Con un método actualizar estado que recibe un parámetro de tipo Estado.
+
 ## Apartado A 
 
 - **Clase** → Clase en POO: Representa una entidad con atributos y métodos. Ej -> Cliente
