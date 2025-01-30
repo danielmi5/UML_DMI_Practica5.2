@@ -6,17 +6,17 @@
 
 ## Apartado A 
 
--**Clases**: Pedido, Producto, Pago, Cliente
--**Objetos**: Camiseta, Zapatos, Pedido123, Pago1
--**Atributos**: nombre, precio, stock (en la clase Producto), id_pedido, estado.
--**Métodos**: registrar_pedido(), calcular_total(), actualizar_estado()
--**Relaciones**:
--**Asociación**: Cliente → Pedido (Cliente accede a Pedido para realizarlo), Pedido → Producto (Pedido accede a productos)
--**Composición**: Pedido → Producto (un pedido contiene productos, y si el pedido se elimina, los productos pueden dejar de estar disponibles para ese pedido)
-Herencia: Efectivo, Tarjeta y Cheque son subclases de la clase Pago
-Dependencias: Pedido depende de Producto para calcular el total.
-Visibilidad: Atributos y métodos como public(+), private(-), protected() en las clases.
-
+- **Clase** → Clase en POO: Representa una entidad con atributos y métodos.
+- **Atributo**  → Variable de instancia: Define el estado o propiedades de una clase.
+- **Operación** → Método: Representa una función o comportamiento de la clase.
+- **Asociación** → Relación entre objetos: Conexión entre clases, equivalente a referencias o atributos de tipo objeto.
+- **Agregación**: Representa una relación débil entre clases, donde una puede existir sin la otra.
+- **Composición**: Aquí no puede existir sin la otra
+- **Herencia** → Herencia en POO: Representa la relación padre-hijo entre clases, donde una subclase hereda atributos y métodos de la superclase.
+- **Interfaz** → Interfaz en POO: Define un conjunto de métodos sin implementación que deben ser implementados por las clases que la usan (como un contrato).
+- **Dependencia** → Uso de una clase dentro de otra: Representa una relación en la que un objeto depende de otro para funcionar.
+- **Realización** → Implementación de una interfaz: Conexión entre una interfaz y la clase que la implementa.
+- **Estado** → Patrón de estado: Mapea el concepto de una máquina de estados a objetos con diferentes comportamientos según su estado.
 
 ## APARTADO B
 
