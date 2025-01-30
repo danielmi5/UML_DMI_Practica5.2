@@ -2,7 +2,7 @@
 
 ## Diagrama UML
 
-![Diagrama UML](archivos/practica5.2.pdf]
+![Diagrama UML](archivos/practica5.2.pdf)
 
 ## Apartado A 
 
