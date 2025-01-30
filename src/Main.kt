@@ -14,7 +14,7 @@ fun main(){
     val cliente = Cliente(1, "Juan Pérez", "juan@correo.com", "Calle Ficticia 123")
     cliente.realizarPedido(pedido, mapaProductos, pago)
 
-    //actualizo el pedido 1 a pagado
+    //actualizo el pedido 1 a entregado
     pedido.actualizarEstado(Estado.ENTREGADO)
 
     cliente.realizarPedido(Pedido(Date(100L)), mapaProductos2, pago)
