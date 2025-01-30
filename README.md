@@ -1,5 +1,9 @@
 # UML_DMI_Practica5.2
 
+## Diagrama UML
+
+![Diagrama UML](archivos/practica5.2.pdf]
+
 ## Apartado A 
 
 -**Clases**: Pedido, Producto, Pago, Cliente
