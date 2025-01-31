@@ -46,8 +46,7 @@ Efectivo, Tarjeta y Cheque ---extends---> Pago
 
 ## APARTADO B
 
-Elegí Draw.io porque es una herramienta gratuita, fácil de usar y accesible desde cualquier navegador sin necesidad de instalar nada. Es intuitiva y tiene plantillas predefinidas para diagramas UML, lo que facilita la creación de diagramas haciendo más rápido el proceso.
-
+Elegí Draw.io porque es una herramienta gratuita, fácil de usar y accesible desde cualquier navegador sin necesidad de instalar nada. Es intuitiva y tiene plantillas predefinidas para diagramas UML, lo que facilita la creación de diagramas haciendo más rápido el proceso. Además, ofrece integración con servicios como Google Drive o GitHub, permitiendo la colaboración en tiempo real.
 
 ## APARTADO C
 
