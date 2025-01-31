@@ -22,6 +22,13 @@
 - Cada pedido puede estar en uno de los siguientes estados: pdte, pgdo, pcdo, envdo, entgdo. El estado de cada pedido debe ser actualizado en el sistema en función de su evolución.
 -> He decido utilizar una clase enumerada para los estados del pedido llamada `Estado`. Con un método actualizar estado que recibe un parámetro de tipo Estado.
 
+Relacioones de asociación:
+Cliente -> Pedido -> Producto
+Pedido -> Pago
+
+Relaciones de herencia:
+Efectivo, Tarjeta y Cheque ---extends---> Pago
+
 ## Apartado A 
 
 - **Clase** → Clase en POO: Representa una entidad con atributos y métodos. Ej -> Cliente
@@ -45,10 +52,12 @@ Elegí Draw.io porque es una herramienta gratuita, fácil de usar y accesible de
 ## APARTADO C
 
 Para crear una clase de un diagrama UML a POO (Kotlin). 
+
 En la caja de cada clase hay 3 cuadros. El primero es el nombre de la clase, el segundo son los atributos y el tercero son los métodos. 
 
 Para crear una clase en Kotlin es: (val -> inmutable , var -> mutable)  |  Dentro de los () van los atributos y dentro de las {} los métodos/funciones/comportamientos de la clase.
 ---> class nombreClase ( val o var nombreAtributo: tipoValor){ fun nombreMétodo(nombreParámetro: tipoValor) }  
+
 Añadir que +, -, # para UML es: public, private, protected para POO.
 Por ejemplo: Una clase privada sería "private class", un atributo privado sería "private var" y un método/función privado sería private fun.
 
